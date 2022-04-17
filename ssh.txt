@@ -1,0 +1,22 @@
+SSH is a secure shell that lets you connect to another computer or server directly.  
+
+Setup
+ssh  User@Server to connect
+
+Symmetrical Encryption-
+Jumbles a piece of text. One side has a key to encrypt and the other has the same key to decrypt. Con: if someone has the same key, can decrypt. 
+
+Asymmetircal Encryption-
+Key Exchange Algorithm is used.  Uses a private key that is not to be shared, and a public key which everyone can see. Data can be encrypted if the computer that sent the data has a public key that matches the receiving computer's private key
+
+
+Hashing
+generates a fixed input.  Spits out a random string of letters and number.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Set up keys
+cd ~/.ssh
+ssh-keygen -C "email"
+choose location
+
+Copy the public key into the authorized_keys.

@@ -1,0 +1,89 @@
+Performance
+
+Regular Client Server relationship-
+  client sends requests to the server a returns one file at a time
+
+
+  3 ways to increase speed
+  1. Client side
+  2. Latency
+  3.Server side
+
+  Network Performance
+  less work = faster performance
+
+  1. Minimize text (UglifyJS)
+  2. Minimize photos -File formats
+  SVG-change size without losing detail.
+  JPG- things with many colors. Cannot be transparent. bigger file
+  GIF - limits the colors
+  PNG-limits the amounts of colors. Mostly used for Logos
+
+  Image Optimization
+  reduce PNG with TinyPNG
+  reduce JPG with JPEG-optimizer 
+  remove image metadata with (verexif.com)
+  different file sizes for screen sizes (CSS queries)
+  CDN IMGIX  
+
+  Less trips
+
+
+  Critical Render Path
+  Render Tree-
+  Combines the HTML tree with the CSS and JS Trees. Downloads pics in the background
+
+  _______________________________________________________
+
+  Part 2
+
+  Optimizing Code
+
+  Code Splitting
+  minimal amounts of JS.
+
+  import the intial page.  The return <this.state.component />
+  instead of importing the Components at the top, import them within the function. Only Downloads when the components are needed.
+
+  An Async Component also helps
+
+  Higher order component.  Component that returns another component
+
+  export default funtion ascynComponent(inportComponent){
+    class AsyncComponents extends Component {
+      constructor(props){
+        super(props);
+        this.state={
+          component: null
+        }
+      }
+
+      async componentDidMount(){
+        const {default: component} = await importComponent()
+        this.setState({
+          component: component
+        })
+      }
+      render(){
+        const Component = this.state.component;
+        return Component ? <Component {...this.props}/> : null
+      }
+    }
+    return ascynComponent
+  }
+
+Component Splittingis another Optimization
+React.lazy() renders a dynamic import. 
+
+Optimization of React
+URL ex: localhost:3000/react_perf. Perfom actions on the screen. will give you a readout on the inspection window under the performance tab.
+
+ShouldComponentUpdate() - lifecycle that will see if a component needs to be rerendered. (header)
+
+Tree Shaking:
+imports the only functions used and discards the rest, etc.
+
+Progressive Web Apps:
+Web apps that can behave like Native apps.
+Better user experience, faster
+

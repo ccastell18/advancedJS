@@ -1,0 +1,35 @@
+Testing is a file that is in Development, not in production.
+BDD - Behavioral Driven Development:
+Write tests to answer True or False questions.
+TDD- Test Driven Development:
+Write the Tests befor Development begins.
+
+3 Tests
+
+Unit Test - individual functions or classes. Easiest to Write
+
+Integration Tests - Tests if application will work together.
+
+Automation Tests - Tests the application on the browser
+
+Testing Libraries
+1. base of the Test
+2. Assertion Library
+3. Test runner
+4. Mock, stubs, spies
+5. Code coverage
+
+Unit Test
+Take an input and expect an output
+Deterministic
+
+Integration Test 
+Cross communication between units of code.
+Spies from mocking Libraries to ensure expected side effects.
+Stubs mock and modify specific parts of the test
+(Mocking a database call)
+Brittle and harder to write.
+
+Automation Test 
+End to End test.
+Runs in browser

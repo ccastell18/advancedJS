@@ -1,0 +1,8 @@
+HTTPS
+PWA uses features that use HTTPS
+
+APP Manifest
+contains information for making your app in PWA. realfavicongenerator.Net
+
+Service Worker
+A script that runs in the background. used for features that do not need a page or human interaction. 

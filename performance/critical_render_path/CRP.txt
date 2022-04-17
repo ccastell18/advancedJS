@@ -1,0 +1,45 @@
+Path 1
+Optimize the HTML files
+-Load CSS files as soon as possible
+-Make sure script tags are on the bottom because they will block CSS from Downloading
+
+Path 2
+CSS - Render Blocking with the DOM
+-Only load whatever is needed - internal or inline Attributes
+-above the fold loading - Loading parts of the CSS after the page has loaded.
+
+<script type="text/javascript">
+  const loadStyleSheet = src => }{
+    if(document.createStylesheet){
+      document.createStylesheet(src)
+    }else{
+      const stylesheet = document.createElement('link');
+      stylesheet.href = src;
+      stylesheet.type = 'text/ccs';
+      sylesheet.rel = 'stylesheet'
+      document.getElementByTagName('head')[0].appendChild(stylesheet)
+    }
+  }
+  window.onload = function(){
+    loadStylesheet('./style.css)
+  }
+  </script>
+  No need to load script in head of HTML
+-Media Attributes -media queries
+-Less Specificity - make CSS tags smaller
+
+Path 3
+-Load Scripts Asynchronously
+<script async> - download JS with another thread. Add to anything that does not affect DOM. Executes JS as soon as JS is downloaded.
+-Defer Loading of Scripts
+<script defer> -  If JS is not critical. Lets Dom load with JS on another thread, executes JS after DOM Loads
+-Minimize Dom Manipulation
+-Avoid long running javascript
+
+Path 4
+Render Tree
+
+Page Speed Analyzers
+-Page Speed Insights
+-Webpage Test
+
