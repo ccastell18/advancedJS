@@ -1,0 +1,9 @@
+Injections
+injecting coding into our code.
+Most common.
+SQL injection 
+
+Fix Injections
+Sanitize Input
+Parametrize Queries (parameters)
+Knex.js or other ORMS ()
